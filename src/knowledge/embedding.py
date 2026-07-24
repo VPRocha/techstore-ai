@@ -1,10 +1,8 @@
 from sentence_transformers import SentenceTransformer
 
-# Carrega o modelo apenas uma vez
-model = SentenceTransformer(
-    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-)
+from src.config import EMBEDDING_MODEL
 
+model = SentenceTransformer(EMBEDDING_MODEL)
 
 def generate_embedding(text: str):
     """

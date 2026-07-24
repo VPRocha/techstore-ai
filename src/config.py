@@ -1,17 +1,17 @@
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATA_DIR = PROJECT_ROOT / "data"
+DATA_DIR = BASE_DIR / "data"
 
 RAW_DATA = DATA_DIR / "raw"
+
 PROCESSED_DATA = DATA_DIR / "processed"
 
-DATABASE_DIR = PROJECT_ROOT / "database"
+KNOWLEDGE_BASE = BASE_DIR / "knowledge_base"
 
-MIGRATIONS_DIR = DATABASE_DIR / "migrations"
-SEEDS_DIR = DATABASE_DIR / "seeds"
-QUERIES_DIR = DATABASE_DIR / "queries"
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
-DOCS_DIR = PROJECT_ROOT / "docs"
-NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
+OLLAMA_MODEL = "llama3.2:3b"
+
+TOP_K = 3
